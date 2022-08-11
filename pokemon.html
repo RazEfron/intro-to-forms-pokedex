@@ -2,9 +2,9 @@
 Goals - 
 * Build forms with the form tag, using generic inputs and a submit button.
 * Write valid HTML by including necessary input attributes.
-* Associate labels with inputs via the for tag or through nesting.
+* Associate labels with inputs via the for attribute or through nesting.
 * Modify inputs by changing the type attribute.
-* Create dropdowns, radio buttons, text areas, and check boxes in forms.
+* Create dropdowns, radio buttons, text inputs, and check boxes in forms.
 * Require fields to be completed on submit with the required keyword.
 -->
 
@@ -25,8 +25,108 @@ Goals -
   <body>
     <h1>Pokedex</h1>
     <h2>Add Pokemon</h2>
+    <form id="poke-form">
+      <label for="nick-name"
+        >Nickname
+        <input
+          id="nick-name"
+          name="nickname"
+          type="text"
+          placeholder="My type is text..."
+          required
+        />
+      </label>
+      <br />
+      <br />
+      <h3>Visibillity</h3>
+
+      <label for="public">Public</label>
+      <input type="radio" name="visibility" id="public" value="public" />
+      <br />
+      <br />
+      <label
+        >Private
+        <input
+          type="radio"
+          name="visibility"
+          id="private"
+          value="private"
+          checked
+        />
+      </label>
+      <br />
+      <br />
+      <label
+        >Don't matter
+        <input
+          type="radio"
+          name="visibility"
+          id="private"
+          value="dont-matter"
+        />
+      </label>
+
+      <br />
+      <br />
+      <label
+        >Pokemon Kind
+        <select name="kind" id="pokemon-kind">
+          <option disabled>-- Select a pokemon --</option>
+          <option value="bulbasaur">Bulbasaur</option>
+          <option value="charmander">Charmander</option>
+          <option value="squirtle">Squirtle</option>
+          <option value="pikachu">Pikachu</option>
+        </select>
+      </label>
+      <br />
+      <br />
+      <h3>items</h3>
+      <label
+        >Backpack
+        <input type="checkbox" name="backpack" id="backpack" value="backpack" />
+      </label>
+      <br />
+      <label
+        >Potion
+        <input type="checkbox" name="potion" id="potion" value="potion" />
+      </label>
+      <br />
+      <label
+        >Rare Candy
+        <input
+          type="checkbox"
+          name="rare-candy"
+          id="rare-candy"
+          value="rare-candy"
+        />
+      </label>
+      <br />
+      <br />
+      <input type="submit" value="Save Pokemon" />
+      <button>Save Pokemon</button>
+    </form>
     <section>
       <ul id="my_pokemon"></ul>
     </section>
   </body>
 </html>
+
+<!--
+  a. The input element should also include both an id and a name attribute. What is the purpose of each of these attributes?
+
+
+
+
+
+  b. What is the for attirbute for? 
+
+  b/2. How does it conect to a label?
+
+  b/3. What is an alternative to using for?
+
+  c. How can you group together radio buttons so that only one option can be selected at a time?
+
+  d. How can you create a checkbox that is, by default, checked?
+  e. How can you make an input field required?
+    Mention, if you haven't yet that we can also use other validations. See line 15
+-->

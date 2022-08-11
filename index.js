@@ -6,10 +6,10 @@ const pokemonPics = {
 };
 
 document.addEventListener("DOMContentLoaded", () => {
+  
   const form = document.getElementById("poke-form");
   form.addEventListener("submit", (event) => {
     event.preventDefault();
-
     const pokemon = document.getElementById("my_pokemon");
 
     const nickname = document.createElement("p");
